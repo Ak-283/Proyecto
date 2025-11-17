@@ -1,3 +1,4 @@
+from estado import progreso, riesgo
 from recursos import (
     nivel_combustible,
     nivel_energia,
@@ -24,6 +25,8 @@ def mostrar_resumen_final(nombre_nave, exito):
     print(f"Oxígeno final: {nivel_oxigeno()}%")
     print(f"Combustible final: {nivel_combustible()}%")
     print(f"Moral final: {nivel_moral()}%")
+    print(f"Progreso de misión: {progreso()}%")
+    print(f"Riesgo acumulado: {riesgo()}%")
     if exito:
         print("Resultado: VICTORIA. Alcanzaste el destino con la tripulación viva.")
     else:
