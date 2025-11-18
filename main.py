@@ -32,6 +32,16 @@ def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
     limpiar_pantalla()
 
 
+def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
+    """Ejecuta un evento, aplica desgaste y muestra panel táctico."""
+    print(funcion_evento())
+    aplicar_desgaste_base()
+    avanzar_progreso(avance)
+    ajustar_riesgo(riesgo_delta)
+    mostrar_panel(nombre)
+    pausar()
+
+
 def ejecutar_mision():
     """Coordina cada fase de la misión espacial."""
     reiniciar_estado()
