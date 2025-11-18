@@ -85,3 +85,21 @@ def recursos_críticos():
         or nivel_combustible() < 20
         or nivel_moral() < 20
     )
+
+
+def aplicar_desgaste_base():
+    """Simula el consumo natural de recursos entre eventos."""
+    ajustar_energia(-4)
+    ajustar_oxigeno(-3)
+    ajustar_combustible(-5)
+    ajustar_moral(-1)
+
+
+def recursos_en_peligro():
+    """Regresa True si los recursos están en zona amarilla."""
+    return (
+        nivel_energia() < 40
+        or nivel_oxigeno() < 40
+        or nivel_combustible() < 35
+        or nivel_moral() < 35
+    )
