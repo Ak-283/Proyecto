@@ -18,7 +18,7 @@ from intro import (
 from monitoreo import mostrar_panel
 from recursos import aplicar_desgaste_base, recursos_críticos
 from resultado import determinar_resultado, mostrar_resumen_final
-from utilidades import pausar, pedir_opcion
+from utilidades import limpiar_pantalla, pausar, pedir_opcion
 
 
 def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
@@ -29,11 +29,13 @@ def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
     ajustar_riesgo(riesgo_delta)
     mostrar_panel(nombre)
     pausar()
+    limpiar_pantalla()
 
 
 def ejecutar_mision():
     """Coordina cada fase de la misión espacial."""
     reiniciar_estado()
+    limpiar_pantalla()
     mostrar_introduccion()
     nombre = solicitar_nombre_nave()
     mostrar_tripulacion(nombre)
@@ -42,12 +44,14 @@ def ejecutar_mision():
     print(f"\n{descripcion}")
     mostrar_configuracion()
     pausar()
+    limpiar_pantalla()
     ejecutar_evento("los asteroides", evento_asteroides, 12, 10)
     ejecutar_evento("la tormenta solar", evento_viento_solar, 14, 12)
     ejecutar_evento("el reciclador", evento_reciclaje, 10, 8)
     ejecutar_evento("la avería", evento_averia_sistemas, 12, 10)
     ejecutar_evento("la nebulosa", evento_nebulosa, 16, 14)
     ejecutar_evento("el rescate", evento_rescate, 14, 10)
+    limpiar_pantalla()
     mensaje_final = evento_salida()
     print(mensaje_final)
     aplicar_desgaste_base()
