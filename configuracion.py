@@ -4,12 +4,12 @@ from recursos import establecer_recursos, nivel_moral
 def configurar_recursos(tipo_mision):
     """Define los recursos iniciales según la dificultad seleccionada."""
     if tipo_mision == 1:
-        establecer_recursos(90, 90, 75, 80)
+        establecer_recursos(95, 93, 90, 85)
         return "Ruta directa: el avance rápido exige agresividad desde el inicio."
     if tipo_mision == 2:
-        establecer_recursos(95, 95, 85, 88)
+        establecer_recursos(100, 98, 90, 90)
         return "Ruta segura: menos margen de error y más presión sobre los sistemas."
-    establecer_recursos(92, 93, 78, 85)
+    establecer_recursos(105, 105, 88, 95)
     return "Ruta de exploración: mantenemos curiosidad, pero sin reservas extras."
 
 
