@@ -1,3 +1,6 @@
+import os
+
+
 def pedir_opcion(max_opcion):
     """Solicita al usuario una opción numérica entre 1 y max_opcion."""
     while True:
@@ -12,3 +15,9 @@ def pedir_opcion(max_opcion):
 def pausar():
     """Espera a que el usuario presione Enter para continuar."""
     input("Presiona Enter para continuar...")
+
+
+def limpiar_pantalla():
+    """Limpia la terminal para evitar saturar el texto."""
+    comando = "cls" if os.name == "nt" else "clear"
+    os.system(comando)
