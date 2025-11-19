@@ -3,7 +3,6 @@ from recursos import (
     ajustar_energia,
     ajustar_moral,
     ajustar_oxigeno,
-    estado_recursos,
     recursos_críticos,
 )
 from utilidades import pedir_opcion
@@ -25,7 +24,6 @@ def evento_asteroides():
         ajustar_combustible(-12)
         ajustar_moral(-4)
         mensaje = "La nave esquivó con cuidado, la tripulación está nerviosa."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " Recursos cercanos a crítico."
     return mensaje
@@ -45,7 +43,6 @@ def evento_viento_solar():
         ajustar_combustible(-15)
         ajustar_moral(-6)
         mensaje = "El cambio de rumbo fue seguro, aunque el combustible sufrió."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " Se sienten las tensiones en la tripulación."
     return mensaje
@@ -68,7 +65,6 @@ def evento_reciclaje():
         ajustar_energia(5)
         ajustar_moral(-4)
         mensaje = "Ahorramos energía, pero la confianza se resiente."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " Las reservas se equilibran con dificultad."
     return mensaje
@@ -92,7 +88,6 @@ def evento_salida():
         ajustar_energia(-8)
         ajustar_moral(1)
         mensaje = "El acoplamiento suave mantiene recursos, pero el tiempo aumenta."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " Sin embargo, los recursos se mantuvieron en el límite."
     return mensaje
@@ -112,7 +107,6 @@ def evento_averia_sistemas():
         ajustar_energia(-5)
         ajustar_moral(-7)
         mensaje = "Seguimos con memorias de falla, la tripulación pierde confianza."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " La nave lucha con las consecuencias."
     return mensaje
@@ -133,7 +127,6 @@ def evento_nebulosa():
         ajustar_combustible(-18)
         ajustar_moral(-5)
         mensaje = "El tiempo se perdió, el equipo está agotado por la espera."
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " El ambiente espacial no perdona."
     return mensaje
@@ -155,7 +148,6 @@ def evento_rescate():
         mensaje = (
             "Continuamos; las reservas se salvan pero el equipo reprende la decisión."
         )
-    print(estado_recursos())
     if recursos_críticos():
         mensaje += " Esta decisión deja secuelas."
     return mensaje

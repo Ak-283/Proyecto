@@ -32,16 +32,6 @@ def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
     limpiar_pantalla()
 
 
-def ejecutar_evento(nombre, funcion_evento, avance, riesgo_delta):
-    """Ejecuta un evento, aplica desgaste y muestra panel táctico."""
-    print(funcion_evento())
-    aplicar_desgaste_base()
-    avanzar_progreso(avance)
-    ajustar_riesgo(riesgo_delta)
-    mostrar_panel(nombre)
-    pausar()
-
-
 def ejecutar_mision():
     """Coordina cada fase de la misión espacial."""
     reiniciar_estado()
@@ -65,9 +55,11 @@ def ejecutar_mision():
     mensaje_final = evento_salida()
     print(mensaje_final)
     aplicar_desgaste_base()
-    avanzar_progreso(12)
+    avanzar_progreso(22)
     ajustar_riesgo(20)
     mostrar_panel("la maniobra final")
+    pausar()
+    limpiar_pantalla()
     etapa_final = not recursos_críticos()
     exito = determinar_resultado(etapa_final)
     mostrar_resumen_final(nombre, exito)

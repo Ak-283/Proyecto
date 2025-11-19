@@ -21,6 +21,8 @@ def ajustar_energia(cambio):
     energia_actual += cambio
     if energia_actual < 0:
         energia_actual = 0
+    if energia_actual > 100:
+        energia_actual = 100
 
 
 def ajustar_oxigeno(cambio):
@@ -29,6 +31,8 @@ def ajustar_oxigeno(cambio):
     oxigeno_actual += cambio
     if oxigeno_actual < 0:
         oxigeno_actual = 0
+    if oxigeno_actual > 100:
+        oxigeno_actual = 100
 
 
 def ajustar_combustible(cambio):
@@ -37,6 +41,8 @@ def ajustar_combustible(cambio):
     combustible_actual += cambio
     if combustible_actual < 0:
         combustible_actual = 0
+    if combustible_actual > 100:
+        combustible_actual = 100
 
 
 def ajustar_moral(cambio):
@@ -45,6 +51,8 @@ def ajustar_moral(cambio):
     moral_actual += cambio
     if moral_actual < 0:
         moral_actual = 0
+    if moral_actual > 100:
+        moral_actual = 100
 
 
 def nivel_energia():
