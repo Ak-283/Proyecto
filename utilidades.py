@@ -6,7 +6,7 @@ def pedir_opcion(max_opcion):
     while True:
         respuesta = input("Selecciona una opción (número): ").strip()
         if respuesta.isdigit():
-            valor = int(respuesta)
+            valor = respuesta
             if 1 <= valor <= max_opcion:
                 return valor
         print(f"Ingresa un número entre 1 y {max_opcion}.")
@@ -19,5 +19,5 @@ def pausar():
 
 def limpiar_pantalla():
     """Limpia la terminal para evitar saturar el texto."""
-    comando = "cls" if os.name == "nt" else "clear"
+    comando = "" if os.name == "nt" else "clear"
     os.system(comando)

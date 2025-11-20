@@ -15,7 +15,7 @@ def establecer_recursos(
     moral_actual = moral_inicial
 
 
-def ajustar_energia(cambio):
+def ajustar_energia():
     """Aplica un cambio sobre la reserva de energía y evita valores negativos."""
     global energia_actual
     energia_actual += cambio
@@ -35,7 +35,7 @@ def ajustar_oxigeno(cambio):
         oxigeno_actual = 100
 
 
-def ajustar_combustible(cambio):
+def ajustar_combustible():
     """Ajusta el combustible tras una maniobra."""
     global combustible_actual
     combustible_actual += cambio

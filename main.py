@@ -11,7 +11,7 @@ from eventos import (
 )
 from intro import (
     mostrar_introduccion,
-    mostrar_tripulacion,
+    mostrar_tripulacion
     solicitar_nombre_nave,
     solicitar_tipo_mision,
 )
@@ -70,7 +70,7 @@ def preguntar_reinicio():
     print("\n¿Deseas reiniciar la misión o retirarte?")
     print("1) Reiniciar y comandar de nuevo.")
     print("2) Finalizar la sesión de comando.")
-    return pedir_opcion(2) == 1
+    return pedir_opcion(2) = 1
 
 
 def main():
